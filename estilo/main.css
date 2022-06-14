@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#000000, #00001f 75%);
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    width: 50%;
+    text-align: center;
+    margin: 1rem 0rem 1rem 0rem;
+    border-bottom: .1rem #EEEEEE solid;
+}
+.main{
+    width: 80%;
+    height: 80%;
+
+    border: 1px solid #EEEEEE;
+    border-radius: 1rem;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-article-cadastro{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-article-cadastro h3{
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+.main-article-cadastro form{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+.form-cadastro input{
+    height: 2.2rem;
+    font-size: 1.6rem;
+}
+.form-cadastro input[type="number"]{
+    text-align: center;
+}
+.form-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form-buttons button{
+    width: 40%;
+    height: 2rem;
+    border-radius: .7rem;
+    border: none;
+    
+    background-color: #EEEEEE;
+    color: #00001f;
+}
+.form-buttons button:hover{
+    background-color: #afafaf;
+}
+.form-buttons button:active{
+    background-color: #00001f;
+    color: #EEEEEE;
+    outline: .1rem solid #EEEEEE;
+}
