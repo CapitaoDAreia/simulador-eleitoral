@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*
+    GENERAL STYLE
+*/
 body{
     width: 100vw;
     height: 100vh;
@@ -11,6 +14,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.all-content{
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    max-height: 1100px;
+    min-width: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .title{
     width: 50%;
@@ -31,6 +46,45 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.main-buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+.main-buttons button{
+    width: 20%;
+    height: 2rem;
+    border-radius: .2rem;
+    border: none;
+    background-color: #EEEEEE;
+    color: #00001f;
+    transition: 1s;
+}
+.main-buttons button:hover{
+    background-color: #010125;
+    color: #EEEEEE;
+    width: 59%;
+    transition: 2s;
+    cursor: pointer;
+}
+.main-buttons button:active{
+    background-color: #00001f;
+    color: #EEEEEE;
+    outline: .1rem solid #EEEEEE;
+}
+
+.footer{
+    width: 80%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*
+    CADASTRO STYLE
+*/
 .main-article-cadastro{
     width: 90%;
     height: 70%;
@@ -75,9 +129,39 @@ body{
 }
 .form-buttons button:hover{
     background-color: #afafaf;
+    cursor: pointer;
 }
 .form-buttons button:active{
     background-color: #00001f;
     color: #EEEEEE;
     outline: .1rem solid #EEEEEE;
+}
+
+/*
+    VOTAR STYLE 
+*/
+.main-article-votar{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.main-article-votar h3{
+    font-size: 2rem;
+}
+.candidatos{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    overflow-y: scroll;
+}
+
+.candidatos .recebe-nome{
+    width: 100%;
+    height: 15%;
 }
