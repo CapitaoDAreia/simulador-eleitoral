@@ -4,8 +4,8 @@
 
 */
 //Realiza o cadastro de candidatos
-function cadastrar(nome, id){
-    return {nome:nome, id: id}
+function cadastrar(nome, id, votos=0){
+    return {nome:nome, id: id, votos}
 }
 //Cria um elemento
 function criaElemento(nome, valor1, valor2){
@@ -30,9 +30,12 @@ articleCadastro.addEventListener('click', e => {
         e.preventDefault()
 
         if(nomeCandidato[0].value.length === 0 || nomeCandidato[1].value.length === 0){
-            alert('É necessário preencher os dados.')
+            popup('É necessário preencher os dados.', 'background-color: #810505')
+        }else if(nomeCandidato[1].value.length !== 2){
+            popup('O ID precisa ser composto por dois digitos', 'background-color: #810505')
         }else {
             candidatosCadastrados.push(cadastrar(nomeCandidato[0].value, nomeCandidato[1].value))
+            popup(`O candidato ${nomeCandidato[0].value} foi cadastrado.`, 'background-color:green')
             limpaCampos(nomeCandidato[0], nomeCandidato[1])
         }
 

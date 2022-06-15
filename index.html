@@ -11,7 +11,7 @@
 <body>
     <div class="all-content">
         <div class="popup">
-            popup
+            
         </div>
         <h1 class="title">Choose The One</h1>
         <div class="main-buttons">
@@ -27,10 +27,10 @@
     
                 <form action="" class="form-cadastro">
                     <label for="cadastrar-nome">Insira o nome do seu candidato</label>
-                    <input type="text" name="cadastrar-nome" id="nome">
+                    <input type="text" name="cadastrar-nome" id="nome" placeholder="Nome do candidato">
     
                     <label for="cadastrar-id">Insira o ID do seu candidato</label>
-                    <input type="number" name="cadastrar-id" id="id">
+                    <input type="number" name="cadastrar-id" id="id" placeholder="Somente dois digitos">
     
                     <div class="form-buttons">
                         <button type="submit">SUBMETER</button>
@@ -44,10 +44,12 @@
                 <h3>Vote</h3>
                 <div class="votacao">
                     <label for="id-escolhido">Insira o ID do seu candidato</label>
-                    <input type="number" name="id-escolhido" id="id-escolhido">
-                    <button>Votar</button>
+                    <input type="number" name="id-escolhido" class="id-escolhido" placeholder="Ex: 99">
+                    <button class="btn-votar">Votar</button>
 
-                    <div class="votar-nomecandidato"></div>
+                    <div class="votar-nomecandidato">
+
+                    </div>
                 </div>
             </article>
         

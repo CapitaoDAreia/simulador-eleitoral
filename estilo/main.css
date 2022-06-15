@@ -110,7 +110,7 @@ body{
     height: 2.2rem;
     font-size: 1.6rem;
 }
-.form-cadastro input[type="number"]{
+.form-cadastro input{
     text-align: center;
 }
 .form-buttons{

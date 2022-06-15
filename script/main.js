@@ -8,6 +8,9 @@ const articleCadastro = document.querySelector('.main-article-cadastro');
 const articleVotar = document.querySelector('.main-article-votar');
 const pageDinamicFooter = document.querySelector('#dinamic-footer');
 const pageArticles = document.querySelectorAll('.main > article');
+const campoVotacaoId = document.querySelector('.id-escolhido');
+const botaoVotar = document.querySelector('.btn-votar');
+const popupWindow = document.querySelector('.popup');
 
 let candidatosCadastrados = [];
 
@@ -32,8 +35,13 @@ function limpaCampos(){
 }
 
 //Dispara o popup na janela
-const popup = (texto) =>{
-
+const popup = (texto, cordefundo) =>{
+    popupWindow.innerText = texto;
+    popupWindow.classList.add('dinamic-popup')
+    popupWindow.setAttribute("style", cordefundo)
+    setTimeout(() =>{
+        popupWindow.classList.remove('dinamic-popup')
+    }, 4000)
 };
 
 
