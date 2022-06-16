@@ -10,6 +10,8 @@ const pageDinamicFooter = document.querySelector('#dinamic-footer');
 const pageArticles = document.querySelectorAll('.main > article');
 const campoVotacaoId = document.querySelector('.id-escolhido');
 const botaoVotar = document.querySelector('.btn-votar');
+const botaoApurar = document.querySelector('.apurar');
+const resultado = document.querySelector('.resultado-apuracao');
 const popupWindow = document.querySelector('.popup');
 
 let candidatosCadastrados = [];
@@ -41,7 +43,7 @@ const popup = (texto, cordefundo) =>{
     popupWindow.setAttribute("style", cordefundo)
     setTimeout(() =>{
         popupWindow.classList.remove('dinamic-popup')
-    }, 4000)
+    }, 2000)
 };
 
 

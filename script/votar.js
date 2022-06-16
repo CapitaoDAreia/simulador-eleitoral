@@ -19,6 +19,8 @@ botaoVotar.addEventListener('click', e =>{
                     i.votos ++;
                     console.log(i.votos, 'votos para', i.nome)
                     popup(`Um voto para ${i.nome}`, 'background-color: green')
+                    campoVotacaoId.value = '';
+                    campoVotacaoId.focus()
                     return;
                 }else{
                     popup('Candidato inexistente', 'background-color: #810505')
