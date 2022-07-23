@@ -1,0 +1,53 @@
+/*
+    VOTAR STYLE 
+*/
+.main-article-votar{
+    width: 90%;
+    height: 40%;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-article-votar h3{
+    font-size: 2rem;
+}
+.votacao{
+    width: 50%;
+    height: 50%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.votacao input{
+    height: 35px;
+    width: 50%;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.id-escolhido{
+    border-radius: 10px;
+}
+.votacao button{
+    margin-top: 1rem;
+    width: 30%;
+    height: 30px;
+    border-radius: 1rem;
+    border: none;
+    
+    background-color: #EEEEEE;
+    color: #00001f;
+}
+.votacao button:hover{
+    background-color: #afafaf;
+    cursor: pointer;
+}
+.votacao button:active{
+    background-color: #00001f;
+    color: #EEEEEE;
+    outline: .1rem solid #EEEEEE;
+}

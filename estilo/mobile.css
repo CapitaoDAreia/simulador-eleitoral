@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+/*
+    GENERAL STYLE
+*/
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#000000, #00001f 75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body main{
+    background-color: #EEEEEE;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 600px;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    padding: 10px;
+}

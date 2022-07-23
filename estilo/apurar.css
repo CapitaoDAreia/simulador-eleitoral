@@ -1,0 +1,50 @@
+/*
+    APURAR STYLE
+*/
+.main-article-apurar{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.main-article-apurar h3{
+    font-size: 2rem;
+}
+.apuracao{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.apuracao .apurar{
+    margin-top: 1rem;
+    width: 30%;
+    height: 30px;
+    border-radius: 1rem;
+    border: none;
+    
+    background-color: #EEEEEE;
+    color: #00001f;
+}
+.apuracao .apurar:hover{
+    background-color: #afafaf;
+    cursor: pointer;
+}
+.apuracao .apurar:active{
+    background-color: #00001f;
+    color: #EEEEEE;
+    outline: .1rem solid #EEEEEE;
+}
+.resultado-apuracao{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}

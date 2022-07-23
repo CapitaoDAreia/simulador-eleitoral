@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Script-->
+    <script src="./script/interceptar.js"></script>
+    <!--CSS-->
     <link rel="stylesheet" href="./estilo/main.css">
+    <link rel="stylesheet" href="./estilo/cadastro.css">
+    <link rel="stylesheet" href="./estilo/votar.css">
+    <link rel="stylesheet" href="./estilo/apurar.css">
     <link rel="stylesheet" href="./estilo/dinamic.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Sistema Eleitoral</title>
 </head>
-<body>
+<body onload="interceptarTela()" onresize="interceptarTela()">
     <div class="all-content">
         <div class="popup">
             
@@ -69,9 +79,10 @@
             <span id="dinamic-footer"></span>
         </footer>
     </div>
+    <script src="./script/main.js"></script>
+    <script src="./script/cadastrar.js"></script>
+    <script src="./script/votar.js"></script>
+    <script src="./script/apurar.js"></script>
 </body>
-<script src="./script/main.js"></script>
-<script src="./script/cadastrar.js"></script>
-<script src="./script/votar.js"></script>
-<script src="./script/apurar.js"></script>
+
 </html>
