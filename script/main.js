@@ -22,12 +22,7 @@ let candidatosCadastrados = [];
 */
 
 
-//Relógio do Dinamic Footer
-setInterval(() =>{
-    let data =  new Date();
-    let dataAtual = data.toLocaleTimeString('pt-BR');
-    pageDinamicFooter.innerText = dataAtual;
-}, 1000)
+
 
 //Recebe campos de input e os limpa
 function limpaCampos(){

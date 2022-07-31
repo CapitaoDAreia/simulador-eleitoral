@@ -6,25 +6,32 @@ class Cadastrar extends Simulador{
         this.campoID = document.querySelector('#id');
         this.candidatosCadastrados = [];
     };
-    criaCandidatos(nome, id, votos = 0){
+    verificaSeCandidatoExiste(nome, id){
         for(let item of this.candidatosCadastrados){
             if(item.nome === nome){
                 this.popup(`Já existe um candidato com o nome ${nome}`, 'background-color: red')
-                return false;
+                return true;
             }else if(item.id === id){
                 this.popup(`Já existe um candidato com o id ${id}`, 'background-color: red')
-                return false;
+                return true;
             }
         };
-        return{
-            nome:nome, 
-            id:id, 
-            votos:votos
-        };
+        return false
+    };
+    criaCandidatos(nome, id, votos = 0){
+        if(this.verificaSeCandidatoExiste(nome, id) === false){
+            return{
+                nome:nome, 
+                id:id, 
+                votos:votos
+            }
+        }
+        return false;
     };
     adicionaCandidatos(nome, id){
-        if(nome && id){
-            const candidato = this.criaCandidatos(nome, id);
+        //A validação dos dados deverá ser efetuada posteriormente, por outro método
+        if(nome && id && id.length === 2 && (typeof nome === 'string')){
+            const candidato = this.criaCandidatos(nome, id); 
             if(candidato != false) {
                 this.candidatosCadastrados.push(candidato);
                 this.popup(`${nome}, ID: ${id} cadastrado com sucesso.`, 'background-color: green')
@@ -44,6 +51,5 @@ class Cadastrar extends Simulador{
         })
     };
 }
-
 const cadastrar = new Cadastrar();
 cadastrar.adicionaEvento('click', 'cadastro-btn-submit');

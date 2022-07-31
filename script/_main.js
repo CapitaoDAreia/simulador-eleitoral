@@ -1,6 +1,14 @@
 /*
     MAIN - Inicia o simulador, efetua a troca de display.
 */
+//Relógio do Dinamic Footer
+setInterval(() =>{
+    const pageDinamicFooter = document.querySelector('#dinamic-footer') 
+    let data =  new Date();
+    let dataAtual = data.toLocaleTimeString('pt-BR');
+    pageDinamicFooter.innerText = dataAtual;
+}, 1000)
+//Simulador
 class Simulador{
     constructor(){
         this.main = document.querySelectorAll('.main > article');
@@ -27,7 +35,7 @@ class Simulador{
         this.popupWindow.setAttribute("style", cordefundo)
         setTimeout(() =>{
             this.popupWindow.classList.remove('dinamic-popup')
-        }, 2000)
+        }, 3000)
     };
     adicionaEvento(evento, class1, class2, class3){
         document.addEventListener(arguments[0], e=>{
