@@ -1,12 +1,16 @@
-class Votar extends Cadastrar{
+class Votar extends Simulador{
     constructor(){
-        super()
+        super() 
         this.body = document.querySelector('.main-article-votar');
         this.botaoVotar = document.querySelector('.btn-votar');
         this.candidatoEscolhido = document.querySelector('.id-escolhido')
         this.candidatos = cadastrar.candidatosCadastrados;
     };
     realizaVotacao(){
+        if(this.candidatoEscolhido.value.length !== 2) {
+            this.popup('Verifique o ID digitado', 'background-color: red');
+            return
+        }
         if(this.candidatos.length > 1){
             for(let elemento of this.candidatos){
                 if(elemento.id === this.candidatoEscolhido.value){
@@ -16,18 +20,18 @@ class Votar extends Cadastrar{
             }
             return;
         }
+        
         this.popup('Só é possível votar com dois candidatos cadastrados...', "background-color: red")
     };
-
     adicionaEvento(evento, class1,){
         this.body.addEventListener(evento, e=>{
             e.preventDefault();
             if(e.target.classList.contains(class1)){
                 this.realizaVotacao()
+                this.candidatoEscolhido.value=""
             }
         })
     };
-    
 }
 
 const votar = new Votar();
